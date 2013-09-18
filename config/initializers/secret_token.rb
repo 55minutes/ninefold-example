@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-NinefoldExample::Application.config.secret_key_base = SECRETS.fetch(:rails_secret_key_base)
+NinefoldExample::Application.config.secret_key_base = ENV["SECRET_TOKEN"] || SECRETS.fetch(:rails_secret_key_base)

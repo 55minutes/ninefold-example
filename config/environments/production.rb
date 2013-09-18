@@ -65,7 +65,7 @@ NinefoldExample::Application.configure do
   config.action_mailer.delivery_method = :postmark
   config.to_prepare do
     ActionMailer::Base.postmark_settings = {
-      api_key: SECRETS.fetch(:postmark_api_key)
+      api_key: ENV["POSTMARK_KEY"] || SECRETS.fetch(:postmark_api_key)
     }
   end
   config.action_mailer.raise_delivery_errors = true
