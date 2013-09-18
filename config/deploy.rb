@@ -20,7 +20,7 @@ set :maintenance_config_warning, false
 set :maintenance_template_path, File.expand_path("../recipes/templates/maintenance.html.erb", __FILE__)
 
 set :scm, "git"
-set :repository, "git@github.com:mbrictson/#{application}.git"
+set :repository, "git@github.com:55minutes/#{application}.git"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
